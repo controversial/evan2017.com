@@ -1,5 +1,5 @@
 {
-  "name": "website-boilerplate",
+  "name": "evan2017.com",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -25,18 +25,18 @@
     "gulp-uglify": "^2.0.0",
     "sass-lint": "^1.9.1"
   },
-  "description": "Sample website code",
-  "version": "1.0.0",
+  "description": "Website for Evan and my campaign for class president and vice president",
+  "version": "0.0.0",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/controversial/website-boilerplate.git"
+    "url": "git+https://github.com/controversial/evan2017.com.git"
   },
   "author": "Luke Deen Taylor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/controversial/website-boilerplate/issues"
+    "url": "https://github.com/controversial/evan2017.com/issues"
   },
-  "homepage": "https://github.com/controversial/website-boilerplate#readme",
+  "homepage": "https://github.com/controversial/evan2017.com#readme",
   "sasslintConfig": ".sass-lint.yml"
 }

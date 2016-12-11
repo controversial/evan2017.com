@@ -2,22 +2,35 @@
 @import colors
 
 
+*
+  box-sizing: border-box
+
+  &::before,
+  &::after
+    box-sizing: border-box
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6
-  font-family: Montserrat, sans-serif
+  font-family: 'Montserrat', sans-serif
   font-weight: 400
 
 h1
   font-size: 5vw
 
+a
+  color: inherit
+
+  &:visited
+    color: inherit
+
+
 body
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif
   color: $light-text-primary
+  background-color: $clinton-light-blue
 
-svg
-  width: 100px
-  height: auto
+  padding-top: 75px

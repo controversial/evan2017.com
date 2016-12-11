@@ -1,0 +1,49 @@
+.top-bar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 75px
+
+  padding: 0 40px
+  margin: 0
+  list-style: none
+
+  display: flex
+  align-items: center
+
+  background-color: $clinton-white
+
+  color: $clinton-blue
+  font-family: 'Montserrat', sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: .05em
+
+
+  li
+    display: inline-block
+
+    &.right
+      margin-left: auto
+
+    svg
+      height: 45px
+      width: auto
+      transition: transform .25s
+
+      &:hover
+        transform: scale(1.2)
+
+  a
+    text-decoration: none
+
+    &.red
+      color: $light-text-primary
+      background-color: $clinton-red
+      transition: background-color .25s
+      padding: .5em 1em
+      border-radius: 5px
+
+      &:hover
+        background-color: darken($clinton-red, 10)

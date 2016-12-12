@@ -1,8 +1,6 @@
 window.addEventListener('scroll', () => {
   const scroll = window.scrollY;
-  if (scroll > 50) {
-    document.getElementById('top-bar').className = 'opaque';
-  } else {
-    document.getElementById('top-bar').className = '';
-  }
+  // Top bar color
+  document.getElementById('top-bar').className =
+    scroll > 50 ? 'opaque' : '';
 });

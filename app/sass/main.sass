@@ -79,7 +79,8 @@ header
 
   a
     position: absolute
-    bottom: 20%
+    // Based on vertical center plus font size of header, allowing for some margin
+    top: calc(51.5vh + 5vw + 30px)
     left: 50%
     // Used over translateX to force hardware-accelerated rendering and prevent
        rendering bugs when scaling

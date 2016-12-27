@@ -6,14 +6,17 @@ window.addEventListener('scroll', () => {
   document.getElementById('top-bar').className =
     scroll > 50 ? 'opaque' : '';
 
-  // Name zoom and fade
+  // Name zoom
   const name = document.querySelector('h1.huge');
-  name.style.transform = `scale(${(1 + (scroll / window.innerHeight))})`;
+  name.style.transform = `translateY(-50%) scale(${(1 + (scroll / window.innerHeight))})`;
+
+  // Header fade
+  const header = document.querySelector('header');
   const opacity = 1 - (2 * (scroll / height));
   if (opacity <= 0) {
-    name.style.display = 'none';
+    header.style.display = 'none';
   } else {
-    name.style.display = 'block';
-    name.style.opacity = 1 - (2 * (scroll / height));
+    header.style.display = 'block';
+    header.style.opacity = 1 - (2 * (scroll / height));
   }
 });

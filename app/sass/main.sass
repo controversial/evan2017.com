@@ -47,6 +47,11 @@ body
 
   margin: 0
 
+  &.modal-open
+    .main-content
+      opacity: .1
+
+
 .background
   position: fixed
   width: 100vw
@@ -118,6 +123,8 @@ header
   overflow: scroll
 
   color: $dark-text-primary
+
+  transition: .5s opacity
 
   section
     background-color: $white

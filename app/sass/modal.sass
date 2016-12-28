@@ -1,0 +1,26 @@
+#modal-container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+
+  background-color: transparentize($black, .8)
+
+  z-index: 2
+
+  opacity: 0
+  pointer-events: none
+
+  transition: .5s opacity
+
+  ::after
+    font-family: 'Ionicons'
+    content: '\f12a'
+
+
+body
+  &.modal-open
+    #modal-container
+      opacity: 1
+      pointer-events: all

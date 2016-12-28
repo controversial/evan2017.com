@@ -14,7 +14,7 @@
   align-items: center
 
   background-color: transparent
-  transition: color .5s, background-color .5s
+  transition: color .5s, background-color .5s, opacity .5s
 
   color: $light-text-primary
   font-family: 'Montserrat', sans-serif
@@ -70,3 +70,9 @@
       &.inverted
         color: $light-text-primary
         background-color: $red
+
+
+body
+  &.modal-open
+    #top-bar
+      opacity: .1

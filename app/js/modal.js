@@ -19,6 +19,8 @@ class Modal {
     closeButton.className = 'close-button';
     closeButton.innerText = '\uf12a';
     this.modalContainer.appendChild(closeButton);
+
+    closeButton.addEventListener('click', this.close);
   }
 
   static init() {

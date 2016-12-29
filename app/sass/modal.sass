@@ -14,9 +14,25 @@
 
   transition: .5s opacity
 
-  ::after
+  .close-button
     font-family: 'Ionicons'
-    content: '\f12a'
+    font-size: 2em
+    color: $light-text-primary
+    text-decoration: none
+
+    position: absolute
+    top: .5em
+    right: .5em
+
+    display: block
+
+    cursor: pointer
+
+    transition: .25s transform
+    transform: translate3d(0, 0, 0)
+
+    &:hover
+      transform: translate3d(0, 0, 0) scale(1.1)
 
 
 body

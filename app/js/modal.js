@@ -13,6 +13,12 @@ class Modal {
     this.elem = document.createElement('div');
     this.elem.className = 'modal';
     this.modalContainer.appendChild(this.elem);
+
+    const closeButton = document.createElement('a');
+    closeButton.setAttribute('href', '#');
+    closeButton.className = 'close-button';
+    closeButton.innerText = '\uf12a';
+    this.modalContainer.appendChild(closeButton);
   }
 
   static init() {

@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 class Modal {
+  /* eslint-enable no-unused-vars */
   constructor(contents) {
     this.contents = contents;
     this.open = false;
@@ -12,6 +14,7 @@ class Modal {
 
     this.elem = document.createElement('div');
     this.elem.className = 'modal';
+    this.elem.innerHTML = this.contents;
     this.modalContainer.appendChild(this.elem);
 
     const closeButton = document.createElement('a');

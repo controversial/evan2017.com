@@ -1,3 +1,4 @@
+/* global Modal */
 window.addEventListener('scroll', () => {
   const scroll = window.scrollY;
   const height = window.innerHeight;
@@ -19,4 +20,10 @@ window.addEventListener('scroll', () => {
     header.style.display = 'block';
     header.style.opacity = 1 - (2 * (scroll / height));
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const m = new Modal('test');
+  document.querySelector('header > a').addEventListener('click', m.present);
 });

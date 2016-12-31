@@ -61,8 +61,11 @@
       top: 0
       transform: none
 
+      animation: .5s mobile-slideOut
+
     .close-button
       color: $dark-text-primary
+      animation: .5s mobile-slideOut
 
 body
   &.modal-open
@@ -73,6 +76,12 @@ body
       .modal
         animation: .5s slideIn
 
+      @media screen and (orientation: portrait) and (max-width: 700px)
+        .modal
+          animation: .5s mobile-slideIn
+
+        .close-button
+          animation: .5s mobile-slideIn
 
 @keyframes slideIn
   from
@@ -87,3 +96,18 @@ body
 
   to
     transform: translate(-50%, 100%)
+
+
+@keyframes mobile-slideIn
+  from
+    transform: translateY(100vh)
+
+  to
+    transform: none
+
+@keyframes mobile-slideOut
+  from
+    transform: none
+
+  to
+    transform: translateY(100vh)

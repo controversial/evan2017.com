@@ -1,5 +1,6 @@
 /* global Modal */
-window.addEventListener('scroll', () => {
+
+function scrollHandler() {
   const scroll = window.scrollY;
   const height = window.innerHeight;
 
@@ -20,8 +21,10 @@ window.addEventListener('scroll', () => {
     header.style.display = 'block';
     header.style.opacity = 1 - (2 * (scroll / height));
   }
-});
+}
 
+window.addEventListener('scroll', scrollHandler);
+window.addEventListener('resize', scrollHandler);
 
 document.addEventListener('DOMContentLoaded', () => {
   const m = new Modal('test');

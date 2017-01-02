@@ -30,7 +30,7 @@ window.addEventListener('resize', scrollHandler);
 const message = `
 
 <h3> Pledge your vote </h3>
-<h4> Support Evan Holland-Shepler and Luke Taylor for the 2017 junior class president and vice president </h4>
+<p> Support Evan Holland-Shepler and Luke Taylor for the 2017 junior class president and vice president </p>
 
 `;
 

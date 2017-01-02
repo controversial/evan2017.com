@@ -24,6 +24,9 @@ class Modal {
     this.elem.appendChild(closeButton);
 
     closeButton.addEventListener('click', this.close);
+    this.modalContainer.addEventListener('click', (e) => {
+      if (e.target === this.modalContainer) this.close();
+    });
   }
 
   static init() {

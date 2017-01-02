@@ -16,13 +16,13 @@
 
   .close-button
     font-family: 'Ionicons'
-    font-size: 2em
-    color: $light-text-primary
+    font-size: 1.25em
+    color: $dark-text-primary
     text-decoration: none
 
     position: absolute
-    top: .5em
-    right: .5em
+    top: 1em
+    right: 1em
 
     display: block
 
@@ -63,10 +63,6 @@
 
       animation: .5s mobile-slideOut
 
-    .close-button
-      color: $dark-text-primary
-      animation: .5s mobile-slideOut
-
 body
   &.modal-open
     #modal-container
@@ -78,9 +74,6 @@ body
 
       @media screen and (orientation: portrait) and (max-width: 700px)
         .modal
-          animation: .5s mobile-slideIn
-
-        .close-button
           animation: .5s mobile-slideIn
 
 @keyframes slideIn

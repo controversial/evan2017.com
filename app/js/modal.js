@@ -21,7 +21,7 @@ class Modal {
     closeButton.setAttribute('href', '#');
     closeButton.className = 'close-button';
     closeButton.innerText = '\uf12a';
-    this.modalContainer.appendChild(closeButton);
+    this.elem.appendChild(closeButton);
 
     closeButton.addEventListener('click', this.close);
   }

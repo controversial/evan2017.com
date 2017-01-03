@@ -58,6 +58,59 @@
       font-size: 1.15em
       text-align: center
 
+    input
+      display: block
+      width: calc(100% - .5em)
+      margin: .25em
+      padding: .5em
+
+      border: 0
+      outline: 0
+      background-color: darken($white, 5)
+
+      font-size: inherit
+
+      transition: .25s background-color
+
+      &:focus
+        background-color: darken($white, 10)
+
+    button
+      border: 0
+      outline: 0
+
+      background-color: $red
+      color: $light-text-primary
+
+      font-size: inherit
+      font-weight: 700
+      letter-spacing: .05em
+      text-transform: uppercase
+
+      padding: .5em 1em
+
+      transition: transform .25s
+
+      &:hover
+        transform: translate3d(0, 0, 0) scale(1.1)
+
+      &:active
+        transform: translate3d(0, 0, 0) scale(1.05)
+
+    div
+      &.form
+        font-size: calc(10px + .5vw)
+
+        div
+          &.horizontal-inputs
+            display: flex
+
+          &.button
+            display: block
+            width: 100%
+            margin-top: 1em
+            text-align: center
+
 
   @media screen and (orientation: portrait) and (max-width: 700px)
     .modal

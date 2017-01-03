@@ -32,6 +32,15 @@ const message = `
 <h3> Pledge your vote </h3>
 <p> Support Evan Holland-Shepler and Luke Taylor for the 2017 junior class president and vice president </p>
 
+<div class="form">
+  <div class="horizontal-inputs">
+    <input type="text" placeholder="First Name"> <input type="text" placeholder="Last Name">
+  </div>
+
+  <input type="email" placeholder="Email">
+
+  <div class="button"> <button type="button"> Pledge your vote </button> </div>
+</div>
 `;
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -39,11 +39,15 @@ const message = `
 
   <input type="email" placeholder="Email">
 
-  <div class="button"> <button type="button"> Pledge your vote </button> </div>
+  <div class="button"> <button type="button" id="formSubmit"> Pledge your vote </button> </div>
 </div>
 `;
 
 document.addEventListener('DOMContentLoaded', () => {
   const m = new Modal(message);
   document.querySelector('header > a').addEventListener('click', m.present);
+
+  document.getElementById('formSubmit').addEventListener('click', () => {
+    console.log('submit');
+  });
 });

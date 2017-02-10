@@ -14,13 +14,9 @@ function scrollHandler() {
 
   // Header fade
   const header = document.querySelector('header');
-  const opacity = 1 - (2 * (scroll / height));
-  if (opacity <= 0) {
-    header.style.display = 'none';
-  } else {
-    header.style.display = 'block';
-    header.style.opacity = 1 - (2 * (scroll / height));
-  }
+  let opacity = 1 - (2 * (scroll / height));
+  if (opacity < 0) opacity = 0;
+  header.style.opacity = 1 - (2 * (scroll / height));
 }
 
 window.addEventListener('scroll', scrollHandler);

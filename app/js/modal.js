@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-class Modal {
-  /* eslint-enable no-unused-vars */
+window.Modal = class Modal {
   constructor(contents) {
     this.contents = contents;
     this.open = false;

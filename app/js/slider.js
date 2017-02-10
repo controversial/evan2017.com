@@ -1,0 +1,3 @@
+window.Slideshow = class Slideshow {
+
+};

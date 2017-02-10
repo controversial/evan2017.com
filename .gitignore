@@ -1,6 +1,7 @@
 dist
 .DS_Store
 app/images/*
+app/pier-bold.otf
 
 # Logs
 logs

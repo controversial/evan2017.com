@@ -48,4 +48,4 @@ window.Modal = class Modal {
   static destroy() {
     document.body.removeChild(this.modalContainer);
   }
-}
+};

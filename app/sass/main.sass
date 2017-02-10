@@ -60,11 +60,19 @@ body
   background-color: $black
 
   div
+    position: absolute
+    width: 100vw
     height: 100vh
-    background-image: url('http://evan2017.com/images/photo-5.jpg')
     background-size: cover
     background-position: center
     filter: blur(2px) brightness(.8)
+    transition: 1s opacity
+
+    &:first-child
+      z-index: 1
+
+    &:last-child
+      z-index: 0
 
 header
   position: fixed

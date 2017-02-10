@@ -50,4 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const imageUrls = [];
   for (let i = 1; i <= 11; i += 1) imageUrls.push(`http://evan2017.com/images/photo-${i}.jpg`);
   window.slideshow = new Slideshow(document.querySelector('.background'), imageUrls);
+  window.slideshow.start(5000);
 });

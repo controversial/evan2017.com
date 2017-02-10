@@ -40,8 +40,8 @@ const message = `
 `;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const m = new Modal(message);
-  document.querySelector('header > a').addEventListener('click', m.present);
+  window.modal = new Modal(message);
+  document.querySelector('header > a').addEventListener('click', window.modal.present);
 
   document.getElementById('formSubmit').addEventListener('click', () => {
     console.log('submit');

@@ -1,4 +1,4 @@
-/* global Modal */
+/* global Modal, Slideshow */
 
 function scrollHandler() {
   const scroll = window.scrollY;
@@ -46,4 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('formSubmit').addEventListener('click', () => {
     console.log('submit');
   });
+
+  const imageUrls = [];
+  for (let i = 1; i <= 11; i += 1) imageUrls.push(`http://evan2017.com/images/photo-${i}.jpg`);
+  window.slideshow = new Slideshow(document.querySelector('.background'), imageUrls);
 });

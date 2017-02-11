@@ -21,6 +21,20 @@ window.addEventListener('scroll', scrollHandler);
 window.addEventListener('resize', scrollHandler);
 
 
+function pledgeVote() {
+  const userData = {
+    first: document.getElementById('first').value,
+    last: document.getElementById('last').value,
+    email: document.getElementById('email').value,
+  };
+  window.data.add(userData).then(() => {
+    window.modal.close();
+    const pledgeButton = document.getElementById('pledgeButton');
+    pledgeButton.disabled = true;
+    pledgeButton.textContent = 'vote pledged';
+  });
+}
+
 const message = `
 
 <h3> Pledge your vote </h3>
@@ -39,15 +53,9 @@ const message = `
 
 document.addEventListener('DOMContentLoaded', () => {
   window.modal = new Modal(message);
-  document.querySelector('header > a').addEventListener('click', window.modal.present);
+  document.getElementById('pledgeButton').addEventListener('click', window.modal.present);
 
-  document.getElementById('formSubmit').addEventListener('click', () => {
-    window.data.add({
-      first: document.getElementById('first').value,
-      last: document.getElementById('last').value,
-      email: document.getElementById('email').value,
-    });
-  });
+  document.getElementById('formSubmit').addEventListener('click', pledgeVote);
 
   const imageUrls = [];
   for (let i = 1; i <= 10; i += 1) imageUrls.push(`https://ch7bmv8n.cloudimg.io/s/width/1000/evan2017.com/images/photo-${i}.jpg?v2`);

@@ -89,7 +89,7 @@ header
     width: 100%
     transform: translateY(-50%)
 
-  a
+  button
     position: absolute
     // Based on vertical center plus font size of header, allowing for some margin
     top: calc(51.5vh + 5vw + 30px)
@@ -99,6 +99,11 @@ header
     transform: translate3d(-50%, 0, 0)
     display: block
     text-align: center
+
+    border: 0
+    outline: none
+    border-radius: 0
+    cursor: pointer
 
     font-size: calc(10px + .5vw)
     font-family: 'Montserrat', sans-serif
@@ -112,13 +117,20 @@ header
 
     padding: .5em 1em
 
-    transition: transform .25s
+    transition: transform .25s, opacity .25s
+
 
     &:hover
       transform: translate3d(-50%, 0, 0) scale(1.1)
 
     &:active
       transform: translate3d(-50%, 0, 0) scale(1.05)
+
+    &:disabled
+      cursor: default
+
+      &:hover
+        transform: translate3d(-50%, 0, 0)
 
 .main-content
   position: absolute

@@ -1,4 +1,4 @@
-/* global Modal, Slideshow */
+/* global Modal, Slideshow, Cookies */
 
 function scrollHandler() {
   const scroll = window.scrollY;
@@ -32,6 +32,7 @@ function pledgeVote() {
     const pledgeButton = document.getElementById('pledgeButton');
     pledgeButton.disabled = true;
     pledgeButton.textContent = 'vote pledged';
+    Cookies.set('votePledged', true);
   });
 }
 
@@ -61,4 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i = 1; i <= 10; i += 1) imageUrls.push(`https://ch7bmv8n.cloudimg.io/s/width/1000/evan2017.com/images/photo-${i}.jpg?v2`);
   window.slideshow = new Slideshow(document.querySelector('.background'), imageUrls);
   window.slideshow.start(5000);
+
+  if (Cookies.get('votePledged')) {
+    const pledgeButton = document.getElementById('pledgeButton');
+    pledgeButton.disabled = true;
+    pledgeButton.textContent = 'vote pledged';
+  }
 });

@@ -128,9 +128,15 @@ header
 
     &:disabled
       cursor: default
+      background-color: $blue
 
       &:hover
         transform: translate3d(-50%, 0, 0)
+
+      &::after
+        padding-left: .5em
+        font-family: Ionicons
+        content: '\f122'
 
 .main-content
   position: absolute

@@ -6,16 +6,15 @@ window.data = {
   // Retrieve data
   get: () => fetch(dataUrl).then(r => r.json()),
 
-  add: (info) => {
-    window.data.get().then((existingData) => {
-      // Add new item
-      existingData.push(info);
-      // PUT to update JSON on server
-      fetch(dataUrl, {
-        method: 'PUT',
-        body: JSON.stringify(existingData),
-        headers: { 'Content-Type': 'application/json' },
-      }).then(r => r.json);
-    });
-  },
+  // Add items to data
+  add: info => window.data.get().then((existingData) => {
+    // After downloading existing list, modify the object with a new item
+    existingData.push(info);
+    // PUT request to update JSON on server
+    return fetch(dataUrl, {
+      method: 'PUT',
+      body: JSON.stringify(existingData),
+      headers: { 'Content-Type': 'application/json' },
+    }).then(r => r.json());
+  }),
 };

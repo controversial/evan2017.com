@@ -28,10 +28,10 @@ const message = `
 
 <div class="form">
   <div class="horizontal-inputs">
-    <input type="text" placeholder="First Name"> <input type="text" placeholder="Last Name">
+    <input id="first" type="text" placeholder="First Name"> <input id="last" type="text" placeholder="Last Name">
   </div>
 
-  <input type="email" placeholder="Email">
+  <input id="email" type="email" placeholder="Email">
 
   <div class="button"> <button type="button" id="formSubmit"> Pledge your vote </button> </div>
 </div>
@@ -42,7 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('header > a').addEventListener('click', window.modal.present);
 
   document.getElementById('formSubmit').addEventListener('click', () => {
-    console.log('submit');
+    window.data.add({
+      first: document.getElementById('first').value,
+      last: document.getElementById('last').value,
+      email: document.getElementById('email').value,
+    });
   });
 
   const imageUrls = [];

@@ -17,4 +17,6 @@ window.data = {
       headers: { 'Content-Type': 'application/json' },
     }).then(r => r.json());
   }),
+
+  count: () => window.data.get().then(existingData => existingData.length),
 };

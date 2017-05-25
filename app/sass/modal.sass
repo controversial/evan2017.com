@@ -7,12 +7,13 @@
 
   background-color: transparentize($black, .8)
 
-  z-index: 3
+  z-index: 5
 
   opacity: 0
   pointer-events: none
 
   transition: .5s opacity
+  overflow-y: scroll
 
   .close-button
     font-family: 'Ionicons'
@@ -41,6 +42,7 @@
     position: absolute
     left: 50vw
     top: 15vh
+    margin-bottom: 15vh
     transform: translateX(-50%)
 
     width: 80vw
@@ -55,7 +57,9 @@
 
     p
       font-size: 1.15em
-      text-align: center
+
+      &.center
+        text-align: center
 
     input
       display: block
@@ -116,7 +120,7 @@
   @media screen and (orientation: portrait) and (max-width: 700px)
     .modal
       width: 100vw
-      height: 100vh
+      min-height: 100vh
       padding: 10vh 10vw
       border-radius: 0
       left: 0
